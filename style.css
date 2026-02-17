@@ -114,15 +114,16 @@ nav .right button {
     align-items: center;
     justify-content: center;
     font-size: clamp(0.5rem, 1vw + 0.8rem, 1.3rem);
-}
-
-.right button {
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .right button:hover {
     border: 1.8px solid orange;
     color: orange;
+}
+
+.right button:active{
+    transform: scaleX(0.9);
 }
 
 
