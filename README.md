@@ -2,7 +2,7 @@
 
 A modern cryptocurrency landing page built using HTML, CSS, and JavaScript.
 
-# Live Demo: https://dpnxhuu.github.io/crypto-landing-page/
+## Live Demo: https://dpnxhuu.github.io/crypto-landing-page/
 
 ## Features
 - Responsive design
