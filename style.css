@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    background: url(./images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.left a{
+    position: relative;
+    transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1), color 0.2s;
+}
+
+.left a::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+     background-color: orange;
+     border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.left a:hover::after{
+    width: 100%;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.nav-desktop {
+    position: relative;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    transition: all 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.15);
+}
+
+nav .left {
+    position: absolute;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+nav .left img {
+    height: 50px;
+}
+
+nav .left a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav .left .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav .right {
+    position: absolute;
+    right: 100px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .right button {
+    height: 100%;
+    background: transparent;
+    color: #fff;
+    border: 2px solid white;
+    padding: 20px 32px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.5rem, 1vw + 0.8rem, 1.3rem);
+}
+.right button{
+    transition: all 0.2s ease;
+}
+.right button:hover{
+    border: 1.8px solid orange;
+    color: orange;
+}
+
+
+main {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    padding-top: 120px;
+}
+
+main aside {
+    position: absolute;
+    left: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+main aside h1 {
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+main aside h1 span {
+    text-transform: capitalize;
+    color: orange;
+    font-weight: 600;
+}
+
+main aside p {
+    color: #fff;
+    width: 69%;
+    margin: 30px 0;
+}
+
+main aside .btn {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.btn button {
+    background-color: orange;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.main-right {
+    position: absolute;
+    right: 190px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Bitcoin {
+    animation: float 2.4s ease-in-out infinite alternate;
+}
+
+.Ethereum {
+    animation: float 2.6s ease-in-out infinite alternate;
+}
+
+.Dogecoin {
+    animation: float 2.2s ease-in-out infinite alternate;
+}
+
+.btn button {
+    /* animation: float 3s ease-in-out infinite alternate; */
+    transition: all 0.3s ease;
+}
+
+.btn button:active {
+    transform: translateY(-5px)
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.Bitcoin,
+.Ethereum,
+.Dogecoin {
+    height: 85px;
+    width: 170px;
+    border: 2px solid rgb(255, 207, 117);
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-right img {
+    height: 40px;
+}
+
+.main-right .name {
+    color: orange;
+}
+
+
+@media (max-width: 720px) {
+
+    body {
+        background: url(./images/background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        width: 60px;
+        padding: 10px 20px;
+        background-color: rgb(3, 3, 41);
+        box-shadow: 0px 0px 5px black;
+        transition: width .5s ease;
+    }
+
+    .nav-mobile.active {
+        width: 100%;
+        transition: width .5s ease;
+    }
+
+
+    .menu-btn {
+        position: relative;
+        bottom: 7px;
+        margin-right: 8px;
+        height: 100%;
+    }
+
+    .menu-btn button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    .btn button {
+        background-color: orange;
+        padding: 10px 20px;
+        border-radius: 30px;
+        color: #fff;
+        border: none;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    .nav-mobile .icons {
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        opacity: 0;
+        font-size: 0px;
+        transition: all .2s linear;
+    }
+
+    .nav-mobile.active .icons {
+        opacity: 1;
+        font-size: 16px;
+        transition: all .8s ease;
+    }
+
+    .nav-mobile .icons a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+
+    main {
+        position: relative;
+        height: 600px;
+        width: 100%;
+        padding-top: 100px;
+    }
+
+    main aside {
+        position: absolute;
+        left: 20px;
+        display: flex;
+    }
+
+    main aside h1 {
+        font-size: 3rem;
+        color: #fff;
+        line-height: 1.1;
+    }
+
+    main aside h1 span {
+        text-transform: capitalize;
+        color: orange;
+    }
+
+    main aside p {
+        color: #fff;
+        width: 69%;
+        margin: 20px 0;
+    }
+
+
+    .main-right {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .Bitcoin,
+    .Ethereum,
+    .Dogecoin {
+        height: 65px;
+        width: 150px;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-right img {
+        height: 40px;
+    }
+
+    .main-right .name {
+        color: orange;
+    }
+
+}
