@@ -9,7 +9,6 @@ window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
 
-
 menuBtn.addEventListener("click", () => {
   navMobile.classList.toggle("active");
 });
