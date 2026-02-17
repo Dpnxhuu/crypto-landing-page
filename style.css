@@ -11,6 +11,8 @@
 }
 
 body {
+    min-height: 100dvh;
+    min-height: 100vh;
     background: url(./images/background.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -188,16 +190,17 @@ main aside .btn {
 
 .btn button {
     /* animation: float 3s ease-in-out infinite alternate; */
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 .btn button:active {
-    transform: translateY(-5px)
+    transform: translateY(-3px)
 }
 
 @keyframes float {
     0% {
-        transform: translateY(0px);
+        transform: translateX(5px);
+        transform: translateY(-2px);
     }
 
     100% {
@@ -231,6 +234,7 @@ main aside .btn {
 @media (max-width: 720px) {
 
     body {
+        min-height: 100dvh;
         background: url(./images/background.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -259,10 +263,9 @@ main aside .btn {
 
 
     .menu-btn {
-        position: relative;
-        bottom: 7px;
-        margin-right: 8px;
-        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .menu-btn button {
@@ -270,6 +273,11 @@ main aside .btn {
         border: none;
         color: #fff;
         font-size: 2rem;
+        transition: transform 0.2s linear;
+    }
+
+    #menu:active{
+        transform: scale(0.8);
     }
 
     .btn button {
@@ -307,7 +315,7 @@ main aside .btn {
 
     main {
         position: relative;
-        height: 600px;
+        min-height: 80dvh;
         width: 100%;
         padding-top: 100px;
     }
@@ -345,7 +353,7 @@ main aside .btn {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 20px;
     }
 
     .Bitcoin,
