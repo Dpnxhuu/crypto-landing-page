@@ -4,6 +4,12 @@ const Bitcoin = document.querySelector(".Bitcoin .value");
 const Ethereum = document.querySelector(".Ethereum .value");
 const Dogecoin = document.querySelector(".Dogecoin .value");
 
+
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
+
 menuBtn.addEventListener("click", () => {
   navMobile.classList.toggle("active");
 });

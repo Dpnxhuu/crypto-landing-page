@@ -17,14 +17,23 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 0.8s ease;
 }
 
-.left a{
+body.loaded{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.left a {
     position: relative;
     transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1), color 0.2s;
 }
 
-.left a::after{
+.left a::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -32,12 +41,12 @@ body {
     transform: translateX(-50%);
     width: 0;
     height: 3px;
-     background-color: orange;
-     border-radius: 2px;
+    background-color: orange;
+    border-radius: 2px;
     transition: all 0.3s;
 }
 
-.left a:hover::after{
+.left a:hover::after {
     width: 100%;
 }
 
@@ -106,10 +115,12 @@ nav .right button {
     justify-content: center;
     font-size: clamp(0.5rem, 1vw + 0.8rem, 1.3rem);
 }
-.right button{
+
+.right button {
     transition: all 0.2s ease;
 }
-.right button:hover{
+
+.right button:hover {
     border: 1.8px solid orange;
     color: orange;
 }
@@ -276,7 +287,7 @@ main aside .btn {
         transition: all 0.3s ease;
     }
 
-    #menu:active{
+    #menu:active {
         transform: scaleX(1.2);
     }
 
